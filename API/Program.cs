@@ -1,4 +1,5 @@
 using API.Data;
+using API.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace API
@@ -16,6 +17,7 @@ namespace API
                 opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
             builder.Services.AddCors();
+            builder.Services.AddScoped<ITokenService, ITokenService>();
 
             var app = builder.Build();
 

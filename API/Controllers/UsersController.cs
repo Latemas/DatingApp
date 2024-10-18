@@ -5,9 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using SQLitePCL;
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[Controller]")]
-    public class UsersController(DataContext context) : ControllerBase
+    public class UsersController(DataContext context) : BaseApiController
     {
 
         [HttpGet]
